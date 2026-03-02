@@ -200,24 +200,29 @@ ul {
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--accent-gold);
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(40, 40, 40, 0.6);
-  line-height: 1.2;
+  letter-spacing: 6px;
+  text-shadow: 0 2px 4px rgba(40, 40, 40, 0.6);
+  line-height: 1;
   transition: transform 0.4s ease, text-shadow 0.4s ease;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
 }
 
 .logo span {
-  font-size: 1.8rem;
-  /* Make SEQUENCE the same size as JUGNU */
-  letter-spacing: 2px;
-  /* Match JUGNU letter spacing */
-  color: var(--accent-gold);
-  /* Use matching gold for span */
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 12px;
+  margin-left: 12px;
+  /* Centers the visually tracked text */
+  font-weight: 500;
+  color: #E0E0E0;
   transition: color 0.4s ease;
+  text-shadow: none;
 }
 
 /* Hover effect for the logo */
