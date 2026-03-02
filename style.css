@@ -311,8 +311,8 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  /* Subtle dark overlay for contrast */
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 80%);
+  /* Darker center overlay for text readability, clear edges */
   z-index: 2;
 }
 
@@ -333,10 +333,11 @@ ul {
 .hero-title {
   font-family: var(--font-heading);
   font-size: 2.5rem;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 2rem;
   color: #D8C69F;
-  text-shadow: 0 2px 4px rgba(40, 40, 40, 0.6);
+  text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hero-subtitle {
