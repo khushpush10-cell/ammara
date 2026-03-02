@@ -26,10 +26,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: var(--font-body);
   background-color: var(--bg-dark);
@@ -246,6 +242,11 @@ ul {
   font-weight: 500;
   position: relative;
   padding-bottom: 5px;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
   color: var(--accent-gold);
 }
 
@@ -256,18 +257,20 @@ ul {
   width: 0;
   height: 2px;
   bottom: 0;
-  left: 0;
+  left: 50%;
   background-color: var(--accent-gold);
-  transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
   box-shadow: 0 0 8px rgba(40, 40, 40, 0.6);
 }
 
 .nav-links a:hover::after {
   width: 100%;
+  left: 0;
 }
 
 .nav-links .text-gold::after {
   width: 100%;
+  left: 0;
   /* Keep underline active for the current page */
 }
 
@@ -292,18 +295,6 @@ ul {
   padding-top: 80px;
 }
 
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(to bottom, transparent 70%, #121212 100%);
-  z-index: 2;
-  pointer-events: none;
-}
-
 .hero-video {
   position: absolute;
   top: 0;
@@ -325,7 +316,12 @@ ul {
   z-index: 2;
 }
 
-/* Removed .hero-bg::after to avoid gradient conflict with .hero::after */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(18, 18, 18, 0) 50%, #121212 100%);
+}
 
 .hero-content {
   max-width: 800px;
@@ -376,25 +372,15 @@ ul {
 }
 
 /* Scroll Animation Classes */
-.category-card,
-.support-section {
+.animate-on-scroll {
   opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .animate-on-scroll.is-visible {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Shimmer overlay on hover */
