@@ -26,6 +26,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--bg-dark);
@@ -288,6 +292,18 @@ ul {
   padding-top: 80px;
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent 70%, #121212 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
 .hero-video {
   position: absolute;
   top: 0;
@@ -309,12 +325,7 @@ ul {
   z-index: 2;
 }
 
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(18, 18, 18, 0) 50%, #121212 100%);
-}
+/* Removed .hero-bg::after to avoid gradient conflict with .hero::after */
 
 .hero-content {
   max-width: 800px;
@@ -365,15 +376,25 @@ ul {
 }
 
 /* Scroll Animation Classes */
-.animate-on-scroll {
+.category-card,
+.support-section {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .animate-on-scroll.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Shimmer overlay on hover */
