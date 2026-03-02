@@ -202,14 +202,11 @@ ul {
   font-family: var(--font-heading);
   font-size: 2.2rem;
   font-weight: 700;
-  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #94722a;
   letter-spacing: 6px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
   line-height: 1;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease, color 0.4s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -224,9 +221,8 @@ ul {
   margin-left: 12px;
   /* Centers the visually tracked text */
   font-weight: 500;
-  color: #C4B085;
-  -webkit-text-fill-color: #C4B085;
-  transition: color 0.4s ease, -webkit-text-fill-color 0.4s ease;
+  color: #94722a;
+  transition: color 0.4s ease;
   text-shadow: none;
   line-height: 1;
 }
@@ -239,7 +235,6 @@ ul {
 
 .logo:hover span {
   color: #E8DCC2;
-  -webkit-text-fill-color: #E8DCC2;
 }
 
 .nav-links {
