@@ -326,13 +326,8 @@ ul {
   font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 2rem;
-  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: #C5A021;
-  /* Fallback Antique Gold */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #E3C567;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .hero-subtitle {
