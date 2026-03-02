@@ -69,6 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
+     * Set slow playback rate for hero video
+     */
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        heroVideo.playbackRate = 0.75;
+    }
+
+    /**
      * Scroll Animations using Intersection Observer
      */
     const scrollElements = document.querySelectorAll('.animate-on-scroll');
