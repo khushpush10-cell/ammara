@@ -286,24 +286,32 @@ ul {
   padding-top: 80px;
 }
 
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
 .hero-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* Use the same bokeh image for the hero, slightly more visible */
-  background: url('bokeh_bg.jpg') center/cover;
-  opacity: 0.4;
+  background: rgba(0, 0, 0, 0.5);
+  /* Subtle dark overlay for contrast */
   z-index: -1;
-  filter: contrast(1.1) brightness(0.9);
 }
 
 .hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(7, 7, 7, 0.2), var(--bg-dark));
+  background: linear-gradient(to bottom, rgba(7, 7, 7, 0), var(--bg-dark));
 }
 
 .hero-content {
