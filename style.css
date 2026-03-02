@@ -181,13 +181,13 @@ ul {
 
 /* Navbar */
 .navbar {
-  background-color: rgba(7, 7, 7, 0.85);
-  backdrop-filter: blur(15px);
+  background-color: #121212;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(211, 152, 42, 0.3);
+  /* Based on #D3982A */
   padding: 1rem 0;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
