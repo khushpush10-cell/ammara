@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lookbook & Gallery | JUGNU SEQUENCE</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .masonry-item:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .masonry-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .masonry-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">JUGNU<br><span>SEQUENCE</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="gallery.html" class="text-gold">Gallery</a></li>
+                <li><a href="quality.html">Quality</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="section" style="padding-top: 120px; padding-bottom: 2rem;">
+        <div class="container text-center">
+            <h1 class="hero-title" style="font-size: 3rem;">Lookbook</h1>
+            <p class="hero-subtitle">Inspiration and detail shots of our premium bridal materials.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="masonry-grid">
+
+                <div class="masonry-item">
+                    <img src="sequins_metallic.png" alt="Detail shot">
+                </div>
+                <div class="masonry-item">
+                    <img src="tilla.png" alt="Detail shot">
+                </div>
+                <div class="masonry-item">
+                    <img src="threads.png" alt="Detail shot">
+                </div>
+                <div class="masonry-item">
+                    <img src="machine_pins.png" alt="Detail shot">
+                </div>
+                <div class="masonry-item">
+                    <img src="accessories.png" alt="Detail shot">
+                </div>
+                <div class="masonry-item">
+                    <img src="fusing.png" alt="Detail shot">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center text-secondary" style="font-size: 0.9rem;">
+            &copy; 2026 JUGNU SEQUENCE. All rights reserved. Wholesale & B2B Only.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

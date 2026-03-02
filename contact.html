@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | JUGNU SEQUENCE</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-info-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-title {
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-info-text {
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">JUGNU<br><span
+                    style="font-size: 0.9rem; letter-spacing: 4px;">SEQUENCE</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="quality.html">Quality</a></li>
+                <li><a href="contact.html" class="text-gold">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="section" style="padding-top: 120px; padding-bottom: 2rem;">
+        <div class="container text-center">
+            <h1 class="hero-title" style="font-size: 3rem;">Get in Touch</h1>
+            <p class="hero-subtitle">Reach out for wholesale inquiries, custom bulk orders, or sample requests.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container contact-grid">
+
+            <!-- Inquiry Form -->
+            <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem;">Send an Inquiry
+                </h3>
+                <form action="#" method="POST"
+                    onsubmit="event.preventDefault(); alert('Inquiry submitted successfully! We will contact you soon.');">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Your Name / Business Name *</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone / WhatsApp Number *</label>
+                        <input type="tel" id="phone" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="interest">Primary Interest</label>
+                        <select id="interest" class="form-input">
+                            <option value="sequins">Sequins</option>
+                            <option value="tilla">Tilla & Threads</option>
+                            <option value="accessories">Accessories / Beads</option>
+                            <option value="fusing">Fusing / Paper</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" class="form-textarea"
+                            placeholder="Tell us about your estimated monthly volume or specific requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                </form>
+            </div>
+
+            <!-- Direct Contact Info -->
+            <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem;">Direct Contact
+                </h3>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-title">WhatsApp Priority Support</div>
+                    <div class="contact-info-text mb-1">For the fastest response, product catalogs, and rate lists,
+                        reach out via WhatsApp.</div>
+                    <div class="wa-chip" data-query="Hi! I am a new client looking for your latest rate list."
+                        style="display:inline-block; margin-top: 1rem;">Send WhatsApp Message</div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-title">Hours of Operation</div>
+                    <div class="contact-info-text">Monday - Saturday<br>10:00 AM - 8:00 PM (PKT)</div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-title">Location</div>
+                    <div class="contact-info-text">Karachi, Pakistan<br>(Please note: We are strictly a wholesale
+                        supplier. No retail walk-ins.)</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding-top: 2rem; border-top: 1px solid var(--border-color);">
+        <div class="container text-center text-secondary" style="font-size: 0.9rem;">
+            &copy; 2026 JUGNU SEQUENCE. All rights reserved. Wholesale & B2B Only.
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

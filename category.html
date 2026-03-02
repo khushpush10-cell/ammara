@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category | JUGNU SEQUENCE</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .product-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn-full {
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">JUGNU<br><span>SEQUENCE</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html" class="text-gold">Collections</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="quality.html">Quality</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="section" style="padding-top: 120px; padding-bottom: 2rem;">
+        <div class="container text-center">
+            <h1 class="hero-title" style="font-size: 2.5rem;" id="category-title">Premium Sequins</h1>
+            <p class="hero-subtitle">High-quality materials available in multiple colors and finishes.</p>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <!-- Dynamic Category Labeling based on URL parameters or just dummy content -->
+            <div class="grid grid-4">
+
+                <!-- Product 1 -->
+                <div class="card product-card" data-name="Matte Flat Sequins 5mm" data-code="SQ-5M-01">
+                    <div class="card-img-wrapper">
+                        <img src="sequins_matte.png" alt="Matte Flat Sequins" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Matte Flat Sequins (5mm)</h3>
+                        <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Multiple colors
+                            available</p>
+                        <p class="card-price">Starting From Rs. 450 / pack</p>
+                        <button class="btn btn-outline btn-full wa-buy-btn">WhatsApp for Details</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="card product-card" data-name="Holographic Cup Sequins 3mm" data-code="SQ-3HC-02">
+                    <div class="card-img-wrapper">
+                        <img src="sequins_holographic.png" alt="Holographic Cup Sequins" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Holographic Cup (3mm)</h3>
+                        <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Silver, Gold,
+                            Copper base</p>
+                        <p class="card-price">Starting From Rs. 600 / pack</p>
+                        <button class="btn btn-outline btn-full wa-buy-btn">WhatsApp for Details</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="card product-card" data-name="Metallic Thread Spool (Zari)" data-code="TH-ZR-01">
+                    <div class="card-img-wrapper">
+                        <img src="tilla.png" alt="Zari Thread" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Metallic Zari Spool</h3>
+                        <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0.5rem;">For heavy bridal
+                            embroidery</p>
+                        <p class="card-price">Starting From Rs. 1200 / cone</p>
+                        <button class="btn btn-outline btn-full wa-buy-btn">WhatsApp for Details</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="card product-card" data-name="Pearlescent Beads (Drop Shape)" data-code="BD-PRL-04">
+                    <div class="card-img-wrapper">
+                        <img src="accessories.png" alt="Pearl Beads" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Pearlescent Drops</h3>
+                        <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Cream, White, Peach
+                        </p>
+                        <p class="card-price">Starting From Rs. 850 / pack</p>
+                        <button class="btn btn-outline btn-full wa-buy-btn">WhatsApp for Details</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="card product-card" data-name="Premium Tilla Thread" data-code="TL-PRM-05">
+                    <div class="card-img-wrapper">
+                        <img src="threads.png" alt="Tilla Thread" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Premium Tilla</h3>
+                        <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Antique Gold &
+                            Silver</p>
+                        <p class="card-price">Starting From Rs. 1500 / cone</p>
+                        <button class="btn btn-outline btn-full wa-buy-btn">WhatsApp for Details</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="card product-card" data-name="Heavy Duty Fusing Sheet" data-code="FS-HD-06">
+                    <div class="card-img-wrapper">
+                        <img src="fusing.png" alt="Fusing Sheet" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Heavy Duty Fusing</h3>
+                        <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Rolls of 50 yards
+                        </p>
+                        <p class="card-price">Starting From Rs. 2200 / roll</p>
+                        <button class="btn btn-outline btn-full wa-buy-btn">WhatsApp for Details</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="card product-card" data-name="Machine Bobbins (Silver)" data-code="MP-BOB-07">
+                    <div class="card-img-wrapper">
+                        <img src="machine_pins.png" alt="Machine Bobbins" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Industrial Bobbins</h3>
+                        <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Pack of 100 pcs</p>
+                        <p class="card-price">Starting From Rs. 850 / box</p>
+                        <button class="btn btn-outline btn-full wa-buy-btn">WhatsApp for Details</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="card product-card" data-name="Crystal Rhinestones (Clear)" data-code="AC-CR-08">
+                    <div class="card-img-wrapper">
+                        <img src="accessories.png" alt="Rhinestones" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Crystal Rhinestones</h3>
+                        <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0.5rem;">SS16 size, clear
+                        </p>
+                        <p class="card-price">Starting From Rs. 950 / pack</p>
+                        <button class="btn btn-outline btn-full wa-buy-btn">WhatsApp for Details</button>
+                    </div>
+                </div>
+
+                <!-- Product 9 - Metallic Sequins -->
+                <div class="card product-card" data-name="Metallic Gold Sequences 4mm" data-code="SQ-4MG-09">
+                    <div class="card-img-wrapper">
+                        <img src="sequins_metallic.png" alt="Metallic Gold Sequins" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Metallic Gold (4mm)</h3>
+                        <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Premium Finish</p>
+                        <p class="card-price">Starting From Rs. 550 / pack</p>
+                        <button class="btn btn-outline btn-full wa-buy-btn">WhatsApp for Details</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center text-secondary" style="font-size: 0.9rem;">
+            &copy; 2026 JUGNU SEQUENCE. All rights reserved. Wholesale & B2B Only.
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script>
+        // Simple script to update header based on URL param
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type');
+            if (type) {
+                const titleMap = {
+                    'sequins': 'Premium Sequins',
+                    'tilla': 'Luxury Tilla & Zari',
+                    'threads': 'Couture Threads',
+                    'machinepins': 'Machine Bobbins & Pins',
+                    'fusing': 'Fusing Sheets',
+                    'accessories': 'Beads & Accessories'
+                };
+                if (titleMap[type]) {
+                    document.getElementById('category-title').innerText = titleMap[type];
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
