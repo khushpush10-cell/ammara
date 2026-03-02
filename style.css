@@ -152,9 +152,9 @@ ul {
 }
 
 .btn-outline {
-  background-color: var(--accent-gold);
-  color: #000000;
-  border: none;
+  background-color: transparent;
+  color: var(--accent-gold);
+  border: 2px solid var(--accent-gold);
 }
 
 .btn-outline:hover {
