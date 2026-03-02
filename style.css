@@ -188,11 +188,31 @@ ul {
   margin-top: auto;
 }
 
+/* Announcement Bar */
+.announcement-bar {
+  background-color: var(--accent-gold);
+  color: #000000;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+  /* Must sit above navbar */
+}
+
 /* Navbar */
 .navbar {
   background-color: #121212;
   position: fixed;
-  top: 0;
+  top: 35px;
+  /* Offset for announcement bar */
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid rgba(211, 152, 42, 0.3);
