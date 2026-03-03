@@ -40,6 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
+     * Handles "WhatsApp Inquiry" button clicks on Hot Selling Slider
+     */
+    const sliderBuyButtons = document.querySelectorAll('.wa-slider-btn');
+
+    sliderBuyButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const color = e.target.getAttribute('data-color');
+            if (!color) return;
+
+            const message = `Salam! I am interested in the ${color} sequins in 3mm and 5mm sizes. Please share wholesale rates.`;
+            openWhatsApp(message);
+        });
+    });
+
+    /**
      * Helper to open WhatsApp link
      */
     function openWhatsApp(message) {
