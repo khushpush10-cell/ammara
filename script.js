@@ -40,20 +40,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
-     * Handles "WhatsApp Inquiry" button clicks on Hot Selling Slider
+     * Dynamic Product Page Logic
      */
-    const sliderBuyButtons = document.querySelectorAll('.wa-slider-btn');
+    if (window.location.pathname.includes('product.html')) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const colorParam = urlParams.get('color');
 
-    sliderBuyButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const color = e.target.getAttribute('data-color');
-            if (!color) return;
+        if (colorParam) {
+            const productData = {
+                'golden': { name: 'Golden', filter: '' },
+                'silver': { name: 'Silver', filter: 'grayscale(100%) brightness(1.2)' },
+                'black': { name: 'Black', filter: 'grayscale(100%) brightness(0.2)' },
+                'light-golden': { name: 'Light Golden', filter: 'hue-rotate(15deg) brightness(1.1) saturate(0.8)' },
+                'copper': { name: 'Copper', filter: 'hue-rotate(-25deg) saturate(1.5) brightness(0.9)' },
+                'golden-glitter': { name: 'Golden Glitter', filter: 'contrast(1.5) brightness(1.2)' },
+                'silver-glitter': { name: 'Silver Glitter', filter: 'grayscale(100%) contrast(1.5) brightness(1.5)' }
+            };
 
-            const message = `Salam! I am interested in the ${color} sequins in 3mm and 5mm sizes. Please share wholesale rates.`;
-            openWhatsApp(message);
-        });
-    });
+            const data = productData[colorParam];
+            if (data) {
+                document.getElementById('productTitle').textContent = data.name + ' Sequins';
+                const img = document.getElementById('productImage');
+                if (data.filter) {
+                    img.style.filter = data.filter;
+                }
+
+                // Update WhatsApp link
+                const waBtn = document.getElementById('productWaBtn');
+                if (waBtn) {
+                    const message = `Salam! I am inquiring about the ${data.name} sequins. Please provide details for 3mm and 5mm sizes.`;
+                    const encodedMessage = encodeURIComponent(message);
+                    waBtn.href = `https://wa.me/923116644706?text=${encodedMessage}`;
+                }
+            } else {
+                document.getElementById('productTitle').textContent = 'Product Not Found';
+            }
+        }
+    }
 
     /**
      * Helper to open WhatsApp link
