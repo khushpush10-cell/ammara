@@ -784,3 +784,51 @@ ul {
   transform: scale(1.1) translateY(-5px);
   box-shadow: 0 0 30px rgba(211, 152, 42, 1), 0 0 50px rgba(211, 152, 42, 0.6);
 }
+
+/* --- Mobile Responsive Fixes --- */
+@media screen and (max-width: 768px) {
+
+  /* Announcement Bar Fixes */
+  .announcement-bar {
+    font-size: 11px;
+    height: auto;
+    min-height: 40px;
+    padding: 6px 10px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Adjust Navbar offset to account for slightly taller announcement bar */
+  .navbar {
+    top: 40px;
+  }
+
+  /* Hero Section Fixes */
+  .hero {
+    height: auto;
+    min-height: unset;
+    aspect-ratio: 9 / 16;
+    /* Fallback for portrait video or container */
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .hero-video {
+    /* Ensure the full video visual is visible without cropping */
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background-color: #000;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
