@@ -894,4 +894,16 @@ ul {
     padding: 14px 20px;
     font-size: 0.95rem;
   }
+
+  /* Footer Brand and Social Center Alignment */
+  .footer-content .footer-col:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-content .footer-col:first-child .social-links {
+    justify-content: center;
+  }
 }
