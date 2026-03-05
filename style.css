@@ -371,6 +371,12 @@ ul {
   z-index: 3;
 }
 
+.hero-buttons-container {
+  position: relative;
+  z-index: 3;
+}
+
+
 .hero-title {
   font-family: var(--font-heading);
   font-size: 2.5rem;
@@ -790,6 +796,8 @@ ul {
 
   /* Announcement Bar Fixes */
   .announcement-bar {
+    box-sizing: border-box;
+    /* fix overflow */
     font-size: 12px;
     height: auto;
     min-height: 40px;
@@ -806,37 +814,84 @@ ul {
 
   /* Hero Section Fixes */
   .hero {
+    display: grid;
+    grid-template-rows: auto auto;
+    /* Video row, Buttons row */
+    grid-template-columns: 100%;
     height: auto;
     min-height: unset;
-    /* Remove forced portrait aspect ratio so it can conform closer to a landscape visual */
-    padding-top: 110px;
-    padding-bottom: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 105px;
+    /* Clear navbar and announcement bar completely */
   }
 
   .hero-video {
-    /* Ensure the full video visual is visible without cropping */
-    height: 100%;
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    /* Take up space in DOM */
+    height: 60vh;
+    /* Controlled, explicitly visible frame */
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    /* Fill the frame cleanly without awkward scaling */
     background-color: #000;
   }
 
+  .hero-bg {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    /* Keeps overlay just on the video frame */
+  }
+
+  .hero-content {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center text safely inside the video cell */
+    padding: 20px;
+  }
+
   .hero-title {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
+    /* Significantly reduced to avoid cutoff */
     margin-bottom: 0.8rem;
     line-height: 1.3;
   }
 
   .hero-subtitle {
     font-size: 0.95rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    /* Remove extra bottom margin now that buttons are gone */
     line-height: 1.4;
   }
 
-  /* Compact the buttons */
-  .hero-content .btn {
-    padding: 10px 18px;
-    font-size: 0.85rem;
-    margin: 5px !important;
+  /* Compact the buttons and place them in the black space below */
+  .hero-buttons-container {
+    grid-row: 2;
+    /* Move it entirely off the overlay */
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically! */
+    gap: 12px;
+    background-color: #000;
+    padding: 25px 20px 40px 20px;
+    /* Padding for the black space */
+  }
+
+  .hero-buttons-container .btn {
+    margin: 0 !important;
+    /* Overrule inline desktop margins */
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 0.95rem;
   }
 }
