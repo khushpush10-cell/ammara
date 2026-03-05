@@ -790,10 +790,10 @@ ul {
 
   /* Announcement Bar Fixes */
   .announcement-bar {
-    font-size: 11px;
+    font-size: 12px;
     height: auto;
     min-height: 40px;
-    padding: 6px 10px;
+    padding: 8px 10px;
     letter-spacing: 0.5px;
     text-align: center;
     line-height: 1.4;
@@ -808,10 +808,9 @@ ul {
   .hero {
     height: auto;
     min-height: unset;
-    aspect-ratio: 9 / 16;
-    /* Fallback for portrait video or container */
-    padding-top: 100px;
-    padding-bottom: 40px;
+    /* Remove forced portrait aspect ratio so it can conform closer to a landscape visual */
+    padding-top: 110px;
+    padding-bottom: 50px;
   }
 
   .hero-video {
@@ -823,12 +822,21 @@ ul {
   }
 
   .hero-title {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  /* Compact the buttons */
+  .hero-content .btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    margin: 5px !important;
   }
 }
