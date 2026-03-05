@@ -636,10 +636,13 @@ ul {
   gap: 2rem;
   padding: 1.5rem 0;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
 .hot-selling-slider::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+  display: none;
+  /* Chrome, Safari, Edge */
 }
 
 .slider-item {
@@ -667,7 +670,7 @@ ul {
   font-size: 1.4rem;
   margin-bottom: 1rem;
   font-family: var(--font-heading);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .reels-container {
@@ -717,4 +720,33 @@ ul {
   width: 100%;
   padding: 10px;
   font-size: 0.95rem;
+}
+
+/* Global Floating WhatsApp Icon */
+.floating-wa-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(211, 152, 42, 0.8), 0 0 40px rgba(211, 152, 42, 0.4);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #d3982a;
+}
+
+.floating-wa-icon svg {
+  width: 35px;
+  height: 35px;
+}
+
+.floating-wa-icon:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 0 30px rgba(211, 152, 42, 1), 0 0 50px rgba(211, 152, 42, 0.6);
 }
